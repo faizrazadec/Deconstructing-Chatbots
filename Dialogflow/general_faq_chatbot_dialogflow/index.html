@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Community Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Link to favicon -->
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Community</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#forum">Forum</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Chatbot Icon -->
+  <div class="chat-icon" onclick="toggleChat()">
+    <img src="bot-icon.png" alt="Chatbot" />
+    <div class="popup-message">Hi! Need help?</div>
+  </div>
+
+  <!-- Chatbot Window -->
+  <div class="chat-window" id="chat-window">
+    <!-- <div class="chat-header">
+      <h4>Chatbot</h4>
+      <span class="close-btn" onclick="toggleChat()">&times;</span>
+    </div> -->
+    <iframe width="350" height="430" allow="microphone;" 
+            src="https://console.dialogflow.com/api-client/demo/embedded/e133fd78-b3ff-49a8-b7c5-01130367669e">
+    </iframe>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section id="home">
+      <h2>Welcome to the Community</h2>
+      <p>Discover the latest discussions and events.</p>
+      <div class="cta-button">
+        <a href="#forum">Join the Discussion</a>
+      </div>
+    </section>
+
+    <section id="forum">
+      <h2>Forum</h2>
+      <p>Join the conversation on our forum.</p>
+      <div class="posts">
+        <!-- Example posts -->
+        <div class="post">
+          <h3>Discussion Topic 1</h3>
+          <p>Brief description of the topic...</p>
+          <button class="read-more">Read More</button>
+        </div>
+        <div class="post">
+          <h3>Discussion Topic 2</h3>
+          <p>Brief description of the topic...</p>
+          <button class="read-more">Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>Events</h2>
+      <p>Upcoming community events and meetups.</p>
+      <div class="events">
+        <!-- Example events -->
+        <div class="event">
+          <h3>Event 1</h3>
+          <p>Details about the event...</p>
+          <button class="register">Register</button>
+        </div>
+        <div class="event">
+          <h3>Event 2</h3>
+          <p>Details about the event...</p>
+          <button class="register">Register</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Get in touch with the community team.</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Community Page. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
